@@ -1,8 +1,37 @@
 apply plugin: 'com.android.library'
 
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'material-preferences-headers'
+
+    publishedGroupId = 'com.kakai'
+    libraryName = 'materialpreferencesheaders'
+    artifact = 'material-preferences-headers'
+
+    libraryDescription = 'A view to help creating a settings main screen similar to the Android system one.'
+
+    siteUrl = 'https://github.com/kakai248/MaterialPreferencesHeaders'
+    gitUrl = 'https://github.com/kakai248/MaterialPreferencesHeaders.git'
+
+    libraryVersion = '1.0'
+    libraryVersionCode = 1
+    libraryPublish = true
+
+    developerId = 'kakai248'
+    developerName = 'Ricardo Carrapiço'
+    developerEmail = 'r.kakai248@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
+apply plugin: 'com.jfrog.bintray'
+apply plugin: 'com.github.dcendents.android-maven'
+
 android {
     compileSdkVersion 23
-    buildToolsVersion "24.0.0 rc2"
+    buildToolsVersion "23.0.2"
 
     defaultConfig {
         minSdkVersion 16
@@ -24,3 +53,5 @@ dependencies {
     compile 'com.android.support:appcompat-v7:23.3.0'
     compile 'com.android.support:cardview-v7:23.3.0'
 }
+
+apply from: 'android-jcenter.gradle'
