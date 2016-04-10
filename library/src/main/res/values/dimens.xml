@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="header_height">72dp</dimen>
+    <dimen name="header_icon_left_margin">16dp</dimen>
+    <dimen name="header_icon_right_margin">32dp</dimen>
+    <dimen name="header_text_size">16sp</dimen>
+
+    <dimen name="category_card_elevation">4dp</dimen>
+    <dimen name="category_card_border_radius">0dp</dimen>
+    <dimen name="category_card_bottom_margin">8dp</dimen>
+    <dimen name="category_title_padding">16dp</dimen>
+    <dimen name="category_title_text_size">14sp</dimen>
+</resources>
