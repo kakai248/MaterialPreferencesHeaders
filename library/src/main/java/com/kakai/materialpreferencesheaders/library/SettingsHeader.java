@@ -30,9 +30,9 @@ public class SettingsHeader extends RelativeLayout {
 
     private void init() {
         inflate(getContext(), R.layout.settings_header, this);
-        container = findViewById(R.id.container);
-        icon = (ImageView) findViewById(R.id.icon);
-        text = (TextView) findViewById(R.id.text);
+        container = findViewById(R.id.mph_header_container);
+        icon = (ImageView) findViewById(R.id.mph_header_icon);
+        text = (TextView) findViewById(R.id.mph_header_text);
     }
 
     public SettingsHeader withIcon(int resId) {

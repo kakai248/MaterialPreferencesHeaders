@@ -25,7 +25,7 @@ public class SettingsView extends LinearLayout {
 
     private void init() {
         inflate(getContext(), R.layout.settings_view, this);
-        categoriesGroup = (LinearLayout) findViewById(R.id.categories);
+        categoriesGroup = (LinearLayout) findViewById(R.id.mph_categories);
     }
 
     public SettingsView withCategories(SettingsCategory... categories) {

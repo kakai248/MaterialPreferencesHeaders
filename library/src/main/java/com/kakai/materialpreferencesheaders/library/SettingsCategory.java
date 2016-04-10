@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 public class SettingsCategory extends RelativeLayout {
 
-    private CardView cardView;
+    private CardView card;
     private TextView categoryName;
     private ViewGroup headersGroup;
 
@@ -33,9 +33,9 @@ public class SettingsCategory extends RelativeLayout {
 
     private void init() {
         inflate(getContext(), R.layout.settings_category, this);
-        cardView = (CardView) findViewById(R.id.cardView);
-        categoryName = (TextView) findViewById(R.id.categoryName);
-        headersGroup = (ViewGroup) findViewById(R.id.headersGroup);
+        card = (CardView) findViewById(R.id.mph_category_card);
+        categoryName = (TextView) findViewById(R.id.mph_category_name);
+        headersGroup = (ViewGroup) findViewById(R.id.mph_category_headers);
 
         useDivider = true;
         dividerRes = 0;
@@ -67,7 +67,7 @@ public class SettingsCategory extends RelativeLayout {
     }
 
     public SettingsCategory withBackgroundColor(int color) {
-        cardView.setBackgroundColor(color);
+        card.setBackgroundColor(color);
         return this;
     }
 
