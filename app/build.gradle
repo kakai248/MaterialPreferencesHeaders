@@ -20,7 +20,7 @@ android {
 }
 
 dependencies {
-    compile project(':library')
+    compile project(':material-preferences-headers')
 
     testCompile 'junit:junit:4.12'
 

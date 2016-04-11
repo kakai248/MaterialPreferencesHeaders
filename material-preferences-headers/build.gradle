@@ -13,8 +13,8 @@ ext {
     siteUrl = 'https://github.com/kakai248/MaterialPreferencesHeaders'
     gitUrl = 'https://github.com/kakai248/MaterialPreferencesHeaders.git'
 
-    libraryVersion = '1.0.3'
-    libraryVersionCode = 4
+    libraryVersion = '1.0.4'
+    libraryVersionCode = 5
     libraryPublish = true
 
     developerId = 'kakai248'
@@ -36,8 +36,8 @@ android {
     defaultConfig {
         minSdkVersion 16
         targetSdkVersion 23
-        versionCode 4
-        versionName "1.0.3"
+        versionCode 5
+        versionName "1.0.4"
     }
     buildTypes {
         release {
