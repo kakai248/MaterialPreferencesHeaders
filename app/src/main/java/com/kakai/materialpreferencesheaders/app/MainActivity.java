@@ -1,4 +1,4 @@
-package com.kakai.materialpreferencesheaders;
+package com.kakai.materialpreferencesheaders.app;
 
 import android.graphics.Color;
 import android.support.v4.content.ContextCompat;
@@ -8,9 +8,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Toast;
 
-import com.kakai.materialpreferencesheaders.library.SettingsCategory;
-import com.kakai.materialpreferencesheaders.library.SettingsHeader;
-import com.kakai.materialpreferencesheaders.library.SettingsView;
+import com.kakai.materialpreferencesheaders.SettingsCategory;
+import com.kakai.materialpreferencesheaders.SettingsHeader;
+import com.kakai.materialpreferencesheaders.SettingsView;
 
 public class MainActivity extends AppCompatActivity {
 

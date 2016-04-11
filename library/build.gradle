@@ -5,7 +5,7 @@ ext {
     bintrayName = 'material-preferences-headers'
 
     publishedGroupId = 'com.kakai'
-    libraryName = 'materialpreferencesheaders'
+    libraryName = 'MaterialPreferencesHeaders'
     artifact = 'material-preferences-headers'
 
     libraryDescription = 'A view to help creating a settings main screen similar to the Android system one.'
@@ -13,8 +13,8 @@ ext {
     siteUrl = 'https://github.com/kakai248/MaterialPreferencesHeaders'
     gitUrl = 'https://github.com/kakai248/MaterialPreferencesHeaders.git'
 
-    libraryVersion = '1.0.2'
-    libraryVersionCode = 3
+    libraryVersion = '1.0.3'
+    libraryVersionCode = 4
     libraryPublish = true
 
     developerId = 'kakai248'
@@ -36,8 +36,8 @@ android {
     defaultConfig {
         minSdkVersion 16
         targetSdkVersion 23
-        versionCode 3
-        versionName "1.0.2"
+        versionCode 4
+        versionName "1.0.3"
     }
     buildTypes {
         release {

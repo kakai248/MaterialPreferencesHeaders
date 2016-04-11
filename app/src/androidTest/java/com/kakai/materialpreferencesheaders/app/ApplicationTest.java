@@ -1,4 +1,4 @@
-package com.kakai.materialpreferencesheaders.library;
+package com.kakai.materialpreferencesheaders.app;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

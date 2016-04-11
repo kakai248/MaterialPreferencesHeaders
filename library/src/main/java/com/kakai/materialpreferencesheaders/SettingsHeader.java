@@ -1,4 +1,4 @@
-package com.kakai.materialpreferencesheaders.library;
+package com.kakai.materialpreferencesheaders;
 
 import android.content.Context;
 import android.util.AttributeSet;
