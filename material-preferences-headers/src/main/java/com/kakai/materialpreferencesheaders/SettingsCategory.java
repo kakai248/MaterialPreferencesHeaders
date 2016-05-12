@@ -93,6 +93,7 @@ public class SettingsCategory extends RelativeLayout {
     }
 
     protected SettingsCategory build() {
+        if(settingsHeaders == null) return this;
 
         for(int i = 0; i < settingsHeaders.length; i++) {
             SettingsHeader header = settingsHeaders[i];

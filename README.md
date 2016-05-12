@@ -14,7 +14,7 @@ See the included sample app.
 Gradle
 ------
 ```groovy
-compile 'com.kakai:material-preferences-headers:1.0.6'
+compile 'com.kakai:material-preferences-headers:1.0.7'
 ```
 
 License
