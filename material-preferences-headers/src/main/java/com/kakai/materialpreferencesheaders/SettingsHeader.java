@@ -13,6 +13,8 @@ public class SettingsHeader extends RelativeLayout {
     private ImageView icon;
     private TextView text;
 
+    private int dividerResId = R.drawable.settings_divider;
+
     public SettingsHeader(Context context) {
         super(context);
         init();
@@ -62,7 +64,7 @@ public class SettingsHeader extends RelativeLayout {
 
     public SettingsHeader withDivider(boolean withDivider) {
         if(withDivider) {
-            text.setBackgroundResource(R.drawable.settings_divider);
+            text.setBackgroundResource(dividerResId);
         } else {
             text.setBackgroundResource(0);
         }
@@ -70,6 +72,7 @@ public class SettingsHeader extends RelativeLayout {
     }
 
     public SettingsHeader withDivider(int resId) {
+        dividerResId = resId;
         text.setBackgroundResource(resId);
         return this;
     }

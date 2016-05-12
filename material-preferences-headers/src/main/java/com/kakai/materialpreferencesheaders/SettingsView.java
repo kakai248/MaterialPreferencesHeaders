@@ -8,6 +8,12 @@ public class SettingsView extends LinearLayout {
 
     private LinearLayout categoriesGroup;
 
+    private int categoryNameColor = 0;
+    private int headerIconTint = 0;
+    private int headerTextColor = 0;
+    private int categoryBackgroundColor = 0;
+    private int headerDivider = 0;
+
     public SettingsView(Context context) {
         super(context);
         init();
@@ -28,8 +34,54 @@ public class SettingsView extends LinearLayout {
         categoriesGroup = (LinearLayout) findViewById(R.id.mph_categories);
     }
 
+    public SettingsView withCategoryNameColor(int color) {
+        categoryNameColor = color;
+        return this;
+    }
+
+    public SettingsView withCategoryBackgroundColor(int color) {
+        categoryBackgroundColor = color;
+        return this;
+    }
+
+    public SettingsView withHeaderIconTint(int color) {
+        headerIconTint = color;
+        return this;
+    }
+
+    public SettingsView withHeaderTextColor(int color) {
+        headerTextColor = color;
+        return this;
+    }
+
+    public SettingsView withHeaderDivider(int resId) {
+        headerDivider = resId;
+        return this;
+    }
+
     public SettingsView withCategories(SettingsCategory... categories) {
         for(SettingsCategory category : categories) {
+
+            if(categoryNameColor != 0) {
+                category = category.withNameColor(categoryNameColor);
+            }
+
+            if(categoryBackgroundColor != 0) {
+                category = category.withBackgroundColor(categoryBackgroundColor);
+            }
+
+            if(headerIconTint != 0) {
+                category = category.withHeaderIconTint(headerIconTint);
+            }
+
+            if(headerTextColor != 0) {
+                category = category.withHeaderTextColor(headerTextColor);
+            }
+
+            if(headerDivider != 0) {
+                category = category.withDivider(headerDivider);
+            }
+
             categoriesGroup.addView(category);
         }
         return this;

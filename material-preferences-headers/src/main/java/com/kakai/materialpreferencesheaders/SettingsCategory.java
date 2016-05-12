@@ -16,6 +16,9 @@ public class SettingsCategory extends RelativeLayout {
     private boolean useDivider;
     private int dividerRes;
 
+    private int headerTextColor = 0;
+    private int headerIconTint = 0;
+
     public SettingsCategory(Context context) {
         super(context);
         init();
@@ -62,6 +65,7 @@ public class SettingsCategory extends RelativeLayout {
     }
 
     public SettingsCategory withDivider(int resId) {
+        useDivider = true;
         dividerRes = resId;
         return this;
     }
@@ -71,16 +75,35 @@ public class SettingsCategory extends RelativeLayout {
         return this;
     }
 
+    public SettingsCategory withHeaderIconTint(int color) {
+        headerIconTint = color;
+        return this;
+    }
+
+    public SettingsCategory withHeaderTextColor(int color) {
+        headerTextColor = color;
+        return this;
+    }
+
     public SettingsCategory withHeaders(SettingsHeader... headers) {
         for(int i = 0; i < headers.length; i++) {
             SettingsHeader header = headers[i];
 
+            if(headerIconTint != 0) {
+                header.withIconTint(headerIconTint);
+            }
+
+            if(headerTextColor != 0) {
+                header.withTextColor(headerTextColor);
+            }
+
             if(useDivider) {
                 if(i < headers.length - 1) {
                     header = header.withDivider(useDivider);
-                }
-                if(dividerRes != 0) {
-                    header = header.withDivider(dividerRes);
+
+                    if(dividerRes != 0) {
+                        header = header.withDivider(dividerRes);
+                    }
                 }
             }
 
