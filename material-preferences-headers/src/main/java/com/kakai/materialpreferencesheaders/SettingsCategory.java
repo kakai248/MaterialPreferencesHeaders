@@ -13,6 +13,8 @@ public class SettingsCategory extends RelativeLayout {
     private TextView categoryName;
     private ViewGroup headersGroup;
 
+    private SettingsHeader[] settingsHeaders;
+
     private boolean useDivider;
     private int dividerRes;
 
@@ -86,19 +88,25 @@ public class SettingsCategory extends RelativeLayout {
     }
 
     public SettingsCategory withHeaders(SettingsHeader... headers) {
-        for(int i = 0; i < headers.length; i++) {
-            SettingsHeader header = headers[i];
+        settingsHeaders = headers;
+        return this;
+    }
+
+    protected SettingsCategory build() {
+
+        for(int i = 0; i < settingsHeaders.length; i++) {
+            SettingsHeader header = settingsHeaders[i];
 
             if(headerIconTint != 0) {
-                header.withIconTint(headerIconTint);
+                header = header.withIconTint(headerIconTint);
             }
 
             if(headerTextColor != 0) {
-                header.withTextColor(headerTextColor);
+                header = header.withTextColor(headerTextColor);
             }
 
             if(useDivider) {
-                if(i < headers.length - 1) {
+                if(i < settingsHeaders.length - 1) {
                     header = header.withDivider(useDivider);
 
                     if(dividerRes != 0) {
@@ -109,6 +117,7 @@ public class SettingsCategory extends RelativeLayout {
 
             headersGroup.addView(header);
         }
+
         return this;
     }
 }

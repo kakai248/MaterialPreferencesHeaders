@@ -8,6 +8,8 @@ public class SettingsView extends LinearLayout {
 
     private LinearLayout categoriesGroup;
 
+    private SettingsCategory[] settingsCategories;
+
     private int categoryNameColor = 0;
     private int headerIconTint = 0;
     private int headerTextColor = 0;
@@ -60,7 +62,13 @@ public class SettingsView extends LinearLayout {
     }
 
     public SettingsView withCategories(SettingsCategory... categories) {
-        for(SettingsCategory category : categories) {
+        settingsCategories = categories;
+        return this;
+    }
+
+    public SettingsView build() {
+
+        for(SettingsCategory category : settingsCategories) {
 
             if(categoryNameColor != 0) {
                 category = category.withNameColor(categoryNameColor);
@@ -82,8 +90,9 @@ public class SettingsView extends LinearLayout {
                 category = category.withDivider(headerDivider);
             }
 
-            categoriesGroup.addView(category);
+            categoriesGroup.addView(category.build());
         }
+
         return this;
     }
 }
